@@ -12,7 +12,7 @@ if(Yii::app()->user->isAdmin)
 
 ?>
 
-<h2>订单</h2>
+<h2><?=Yii::t('main','order');?></h2>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

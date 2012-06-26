@@ -88,11 +88,16 @@ class ProductController extends Controller
 			
 			if (isset($images) && count($images) > 0) 
 			{
-                				// go through each uploaded image
-               				 foreach ($images as $image => $pic) 
+                // go through each uploaded image
+               	foreach ($images as $pic) 
 				{
-                  				if ($pic->saveAs(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$pic->name)) 
+                  	if ($pic->saveAs(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$pic->name)) 
 					{
+						/*
+						$image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$pic->name);
+						$image->resize(Yii::app()->params['photoSize']['width'], Yii::app()->params['photoSize']['height'],Image::NONE);
+						$image->save(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$pic->name);
+						*/
 						$photoModel = new Photo;
 						$photoModel->photo_name = $pic->name;
 						$photoModel->product_id = $productModel->product_id;
@@ -102,12 +107,12 @@ class ProductController extends Controller
 						{
 							throw new CHttpException(400,'图片上传遇到问题，请重新上传或与开发者联系');
 						}
-                  				}
-                    				else  // handle the errors here, if you want
+                  	}
+                    else  // handle the errors here, if you want
 					{
 						;
 					}
-                				}
+                }
 				//Create the thumbnail for the product
 				$photoModel = Photo::model()->findByAttributes(array('product_id'=>$productModel->product_id));
 				$image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$photoModel->photo_name);

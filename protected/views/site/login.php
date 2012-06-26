@@ -1,11 +1,11 @@
 <?php
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'登录',
+	Yii::t('site','login'),
 );
 ?>
 
-<h2>登录</h2>
+<h2><?=Yii::t('site','login');?></h2>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -30,7 +30,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('登录'); ?>
+		<?php echo CHtml::submitButton(Yii::t('site','login')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -1,7 +1,6 @@
 <?php
 
 return array(
-	//Order
 	'order'  		=> '订单',
 	'ordermanager' 	=> '管理订单',
 	'ordercreate' 	=> '创建订单',
@@ -23,6 +22,7 @@ return array(
 	'five'			=> '五',
 	'six'			=> '六',
 	'seven'			=> '七',
+	'day'			=> '天',
 	'id'			=> '序号',
 	'orderid'		=> '订单号',
 	'orderstatezn'	=> '订单状态',
@@ -34,6 +34,12 @@ return array(
 	'productiontime'=> '制作时间',
 	'expressid'		=> '快递编号',
 	'productname'	=> '产品名称',
+	//Log
+	'Url has been changed, please try again!'	=> '信息被非法修改，可能引起异常，请重新再试！',
+	'is producting'								=> '进行制作',
+	'Order is not exist!'						=> '订单不存在！',
+	'Order id format is wrong, please try again!'	=> '订单号格式有错误，请检测后重新输入！',
+	'Order is not exist, please try again!' 	=> '输入的订单号从未入库，请核实订单号后重新输入！',
 );
 
 ?>

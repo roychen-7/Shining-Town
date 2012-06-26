@@ -75,13 +75,13 @@ class OrderController extends Controller
 		{
 			if(!isset($_GET['sid'])||$_GET['sid']!=='1')
 			{
-				throw new CHttpException(405,'信息被非法修改，可能引起异常，请重新再试！');
+				throw new CHttpException(405,Yii::t('order','Url has been changed, please try again!'));
 			}
 			$model->attributes=$_POST['Order'];
 			$model->order_state_id = 1;
 			$model->create_time = date("Y-m-d");
 			$model->entered_pid = Yii::app()->user->userId;
-			$model->remark = date("Y-m-d",strtotime("+2 day")).'进行制作';
+			$model->remark = date("Y-m-d",strtotime("+2 day")).Yii::t('order','is producting');
 			if($model->save())
 			{
 				$this->redirect(array('view','id'=>$model->id));
@@ -94,7 +94,7 @@ class OrderController extends Controller
 	}
 	
 	//Search method used by customers
-	public function actionSearch()
+	public function actionCustomer()
 	{
 		$model = new Order;
 		$errorMessage = null;
@@ -109,7 +109,7 @@ class OrderController extends Controller
 		else
 		{
 			$model -> unsetAttributes();
-			$errorMessage = '订单号不存在！';
+			$errorMessage = Yii::t('order','Order is not exist!');
 		}
 		
 		$this->layout = false;
@@ -135,7 +135,7 @@ class OrderController extends Controller
 		
 		if(!isset($_GET['sid'])||$_GET['sid']>7||$_GET['sid']<2)
 		{
-			throw new CHttpException(405,'信息被非法修改，可能引起异常，请重新再试！');
+			throw new CHttpException(405,Yii::t('order','Url has been changed, please try again!'));
 		}
 		
 		$sid = $_GET['sid'];
@@ -144,12 +144,12 @@ class OrderController extends Controller
 		{
 			if(!Order::model()->isValidateOrderId($_POST['Order']['order_id']))
 			{
-				throw new CHttpException(404,'订单号格式有错误，请检测后重新输入！');
+				throw new CHttpException(404,Yii::t('order','Order id format is wrong, please try again!'));
 			}
 			$model = $this->loadExistOrder($_POST['Order']['order_id']);
 			if($model->isNewRecord)
 			{
-				throw new CHttpException(404,'输入的订单号从未入库，请核实订单号后重新输入！');
+				throw new CHttpException(404,Yii::t('order','Order is not exist, please try again!'));
 			}
 			$model->order_state_id = $_GET['sid'];
 			$model->create_time = date("Y-m-d");
@@ -157,7 +157,7 @@ class OrderController extends Controller
 			switch($model->order_state_id)
 			{
 			case 2:
-				$model->remark = $_POST['Order']['production_time'].'天';
+				$model->remark = $_POST['Order']['production_time'].Yii::t('order','day');
 				break;
 			case 6:
 				$model->remark = $_POST['Order']['express_id'];

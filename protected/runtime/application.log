@@ -5408,3 +5408,67 @@ Stack trace:
 #11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
 #13 {main} REQUEST_URI=/ShiningTown/order/update
+2012/06/26 17:08:17 [error] [exception.CHttpException.405] exception 'CHttpException' with message '信息被非法修改，可能引起异常，请重新再试！' in D:\xampp\htdocs\ShiningTown\protected\controllers\OrderController.php:138
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): OrderController->actionUpdate()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('update')
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('order/update')
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#13 {main} REQUEST_URI=/ShiningTown/order/update/
+2012/06/26 17:21:21 [error] [exception.CHttpException.405] exception 'CHttpException' with message '信息被非法修改，可能引起异常，请重新再试！' in D:\xampp\htdocs\ShiningTown\protected\controllers\OrderController.php:138
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): OrderController->actionUpdate()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('update')
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('order/update')
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#13 {main} REQUEST_URI=/ShiningTown/order/update/
+2012/06/26 17:21:22 [error] [exception.CHttpException.405] exception 'CHttpException' with message '信息被非法修改，可能引起异常，请重新再试！' in D:\xampp\htdocs\ShiningTown\protected\controllers\OrderController.php:138
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): OrderController->actionUpdate()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('update')
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('order/update')
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#13 {main} REQUEST_URI=/ShiningTown/order/update/
+2012/06/26 17:22:28 [error] [exception.CHttpException.405] exception 'CHttpException' with message '信息被非法修改，可能引起异常，请重新再试！' in D:\xampp\htdocs\ShiningTown\protected\controllers\OrderController.php:138
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): OrderController->actionUpdate()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('update')
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('order/update')
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#13 {main} REQUEST_URI=/ShiningTown/order/update/

@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'订单',
+	Yii::t('order','order'),
 );
 
 if(Yii::app()->user->isAdmin)
 {
 	$this->menu=array(
-		array('label'=>'管理订单', 'url'=>array('admin')),
+		array('label'=>Yii::t('order','ordermanager'), 'url'=>array('admin')),
 	);
 }
 
 ?>
 
-<h2><?=Yii::t('main','order');?></h2>
+<h2><?=Yii::t('order','order');?></h2>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

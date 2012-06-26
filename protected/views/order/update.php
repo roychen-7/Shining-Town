@@ -30,8 +30,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'创建订单', 'url'=>array('index')),
-	array('label'=>'管理订单', 'url'=>array('admin')),
+	array('label'=>yii::t('order','ordercreate'), 'url'=>array('index')),
+	array('label'=>yii::t('order','ordermanager'), 'url'=>array('admin')),
 );
 ?>
 

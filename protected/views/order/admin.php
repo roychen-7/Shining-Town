@@ -42,9 +42,6 @@ $('.search-form form').submit(function(){
 		'create_time',
 		'product_id',
 		'entered_pid',
-		/*
-		'remark',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

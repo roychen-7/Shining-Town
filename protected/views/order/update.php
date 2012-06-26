@@ -5,28 +5,28 @@ $step = '';
 switch($sid)
 {
 case 2:
-	$step = '二';
+	$step = Yii::t('order','two');
 	break;
 case 3:
-	$step = '三';
+	$step = Yii::t('order','three');
 	break;
 case 4:
-	$step = '四';
+	$step = Yii::t('order','four');
 	break;
 case 5:
-	$step = '五';
+	$step = Yii::t('order','five');
 	break;
 case 6:
-	$step = '六';
+	$step = Yii::t('order','six');
 	break;
 case 7:
-	$step = '七';
+	$step = Yii::t('order','seven');
 	break;
 }
 
 $this->breadcrumbs=array(
-	'订单'=>array('index'),
-	'步骤'.$step,
+	Yii::t('order','order')=>array('index'),
+	Yii::t('order','step').$step,
 );
 
 $this->menu=array(
@@ -35,6 +35,6 @@ $this->menu=array(
 );
 ?>
 
-<h2>创建订单</h2>
+<h2><?=Yii::t('order','ordercreate');?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model,'sid'=>$sid)); ?>

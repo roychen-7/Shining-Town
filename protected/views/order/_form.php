@@ -41,7 +41,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? '入库' : '入库'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('order','input') : Yii::t('order','input')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'订单创建'=>array('index'),
-	'步骤一',
+	Yii::t('order','ordercreate')=>array('index'),
+	Yii::t('order','step').Yii::t('order','one'),
 );
 
 if(Yii::app()->user->isAdmin)
 {
 	$this->menu=array(
-		array('label'=>'创建订单', 'url'=>array('index')),
-		array('label'=>'管理订单', 'url'=>array('admin')),
+		array('label'=>Yii::t('order','ordercreate'), 'url'=>array('index')),
+		array('label'=>Yii::t('order','ordermanager'), 'url'=>array('admin')),
 	);
 }
 
 ?>
 
-<h2>创建订单</h2>
+<h2><?=Yii::t('order','ordercreate')?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

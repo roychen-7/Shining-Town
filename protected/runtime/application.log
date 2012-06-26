@@ -5367,3 +5367,44 @@ Stack trace:
 REQUEST_URI=/ShiningTown/order/update/sid/7.html
 HTTP_REFERER=http://localhost/ShiningTown/order/update/sid/7.html
 ---
+2012/06/26 16:21:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection 无法开启数据库连线: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\xampp\htdocs\yii\framework\db\CDbConnection.php:364
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\CDbConnection.php(313): CDbConnection->open()
+#1 D:\xampp\htdocs\yii\framework\db\CDbConnection.php(291): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\yii\framework\base\CModule.php(372): CDbConnection->init()
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(429): CModule->getComponent('db')
+#4 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(609): CApplication->getDb()
+#5 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(2275): CActiveRecord->getDbConnection()
+#6 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(372): CActiveRecordMetaData->__construct(Object(User))
+#7 D:\xampp\htdocs\ShiningTown\protected\models\User.php(24): CActiveRecord::model('User')
+#8 D:\xampp\htdocs\ShiningTown\protected\components\UserIdentity.php(22): User::model()
+#9 D:\xampp\htdocs\ShiningTown\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#10 D:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(39): LoginForm->authenticate('password', Array)
+#11 D:\xampp\htdocs\yii\framework\validators\CValidator.php(192): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\xampp\htdocs\yii\framework\base\CModel.php(152): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\xampp\htdocs\ShiningTown\protected\controllers\SiteController.php(90): CModel->validate()
+#14 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#16 D:\xampp\htdocs\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('login')
+#19 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/login')
+#20 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#21 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#22 {main} REQUEST_URI=/ShiningTown/site/login.html
+2012/06/26 16:38:53 [error] [exception.CHttpException.405] exception 'CHttpException' with message '信息被非法修改，可能引起异常，请重新再试！' in D:\xampp\htdocs\ShiningTown\protected\controllers\OrderController.php:138
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): OrderController->actionUpdate()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CController->run('update')
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('order/update')
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#13 {main} REQUEST_URI=/ShiningTown/order/update

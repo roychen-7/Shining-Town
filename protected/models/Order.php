@@ -31,9 +31,9 @@ class Order extends CActiveRecord
 	public function getProductionTime()
 	{
 		return array(
-			self::PRODUCTION_TIME_ONEDAY => '一天',
-			self::PRODUCTION_TIME_ONEDAYANDAHALF => '一天半',
-			self::PRODUCTION_TIME_TWODAYS => '两天',
+			self::PRODUCTION_TIME_ONEDAY => Yii::t('order','oneday'),
+			self::PRODUCTION_TIME_ONEDAYANDAHALF => Yii::t('order','onedayandahalf'),
+			self::PRODUCTION_TIME_TWODAYS => Yii::t('order','twodays'),
 		);
 	}
 	
@@ -90,17 +90,17 @@ class Order extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => '序号',
-			'order_id' => '订单号',
-			'order_state_zn' => '订单状态',
-			'order_state_id' => '订单状态号',
-			'create_time' => '订单创建时间',
-			'product_id' => ' 产品编号',
-			'entered_pid' => '输入者',
-			'remark' => '备注',
-			'production_time'=>'制作时间',
-			'express_id'=>'快递编号',
-			'product_name'=> '产品名称'
+			'id' 			=> Yii::t('order','id'),
+			'order_id'		=> Yii::t('order','orderid'),
+			'order_state_zn'=> Yii::t('order','orderstatezn'),
+			'order_state_id'=> Yii::t('order','orderstateid'),
+			'create_time' 	=> Yii::t('order','createtime'),
+			'product_id' 	=> Yii::t('order','productid'),
+			'entered_pid' 	=> Yii::t('order','enteredpid'),
+			'remark' 		=> Yii::t('order','remark'),
+			'production_time'=> Yii::t('order','productiontime'),
+			'express_id'	=> Yii::t('order','expressid'),
+			'product_name'	=> Yii::t('order','productname'),
 		);
 	}
 
@@ -188,11 +188,6 @@ class Order extends CActiveRecord
 		}
 		return 0;
 	}
-	/*
-	private function setOrderAttributes($attributes = array())
-	{
-		;
-	}*/
 	
 	static public function getSteps()
 	{

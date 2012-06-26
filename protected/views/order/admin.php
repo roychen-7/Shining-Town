@@ -1,11 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'订单'=>array('index'),
-	'管理',
+	Yii::t('order','order')=>array('index'),
+	Yii::t('order','manager'),
 );
 
 $this->menu=array(
-	array('label'=>'创建订单', 'url'=>array('index')),
+	array('label'=>Yii::t('order','ordercreate'), 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -22,9 +22,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2>管理订单</h2>
+<h2><?=Yii::t('order','ordermanager');?></h2>
 
-<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link(Yii::t('order','advancesearch'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

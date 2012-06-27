@@ -1,14 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'意见反馈',
+	Yii::t('feedback','feedback'),
 );
 
 $this->menu=array(
-	array('label'=>'反馈管理', 'url'=>array('admin')),
+	array('label'=>Yii::t('feedback','feedbackmanager'), 'url'=>array('admin')),
 );
 ?>
 
-<h2>意见反馈</h2>
+<h2><?=Yii::t('feedback','feedbacklist');?></h2>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

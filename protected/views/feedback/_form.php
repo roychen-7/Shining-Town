@@ -13,7 +13,7 @@
 
 echo '<br />';
 
-echo CHtml::image(Yii::app()->baseUrl.'/images/feedback/'.$model->order_id.'/feedback.png','图片的说明',array('width'=>'200px','height'=>'200px')); 
+echo CHtml::image(Yii::app()->baseUrl.'/images/feedback/'.$model->order_id.'/feedback.png','',array('width'=>'200px','height'=>'200px')); 
 
 ?>
 
@@ -31,7 +31,7 @@ echo CHtml::image(Yii::app()->baseUrl.'/images/feedback/'.$model->order_id.'/fee
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : '处理'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : Yii::t('feedback','deal')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -59,11 +59,11 @@ class FeedbackController extends Controller
 
 			if(!Order::model()->existOrderByOrderId($createFeedback['order_id']))
 			{
-				$errorMessage = "订单号有错，请核实后重新输入";
+				$errorMessage = Yii::t('feedback','Error orderid, please try again!');
 			}
 			elseif(is_dir("images/feedback/".$createFeedback['order_id']))
 			{
-				$errorMessage = "已经提交过问题，请等候处理，或直接与客服人员联系";
+				$errorMessage = Yii::t('feedback','Feedback has already submited please wait!');
 			}
 			else
 			{
@@ -75,7 +75,7 @@ class FeedbackController extends Controller
 
 				if(!$model->save())
 				{
-					$errorMessage = "提交的信息可能有误，请重新提交或者与客服联系。";
+					$errorMessage = Yii::t('feedback','Feedback message has error, please try again!');
 				}
 
 				if(isset($_POST['image']))
@@ -94,7 +94,7 @@ class FeedbackController extends Controller
 				}
 				if(!$model->save())
 				{
-					$errorMessage = "提交的信息可能有误，请重新提交或者与客服联系。";
+					$errorMessage = Yii::t('feedback','Feedback message has error, please try again!');
 				}
 			}
 

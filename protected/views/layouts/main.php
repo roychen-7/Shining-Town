@@ -33,7 +33,7 @@
 				array('label'=>Yii::t('order','ordermanager'), 'url'=>array('/order/admin'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>'新品发布', 'url'=>array('/product/create'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>'评论管理', 'url'=>array('/comment/index'), 'visible'=>Yii::app()->user->isAdmin),
-				array('label'=>'反馈处理', 'url'=>array('/feedback/index'), 'visible'=>Yii::app()->user->isAdmin),
+				array('label'=>Yii::t('feedback','feedbackdeal'), 'url'=>array('/feedback/index'), 'visible'=>Yii::app()->user->isAdmin),
 			),
 		)); ?>
 	</div><!-- mainmenu -->

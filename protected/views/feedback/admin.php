@@ -1,11 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'意见反馈'=>array('index'),
-	'处理',
+	Yii::t('feedback','feedback')=>array('index'),
+	Yii::t('feedback','deal'),
 );
 
 $this->menu=array(
-	array('label'=>'反馈列表', 'url'=>array('index')),
+	array('label'=>Yii::t('feedback','feedbacklist'), 'url'=>array('index')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -22,9 +22,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2>处理反馈</h2>
+<h2><?=Yii::t('feedback','feedbackdeal');?></h2>
 
-<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link(Yii::t('feedback','advancesearch'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

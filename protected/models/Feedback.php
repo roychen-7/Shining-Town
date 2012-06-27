@@ -72,14 +72,14 @@ class Feedback extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => '序号',
-			'order_id' => '订单编号',
-			'text' => '正文',
-			'contact_method' => '联系方式',
-			'create_time' => '创建时间',
-			'photo_name' => '相片名字',
-			'dealed' => '是否处理',
-			'dealed_zn' => '是否处理',
+			'id' 		=> Yii::t('feedback','id'),
+			'order_id' 	=> Yii::t('feedback','orderid'),
+			'text' 		=> Yii::t('feedback','text'),
+			'contact_method'=> Yii::t('feedback','contactmethod'),
+			'create_time' 	=> Yii::t('feedback','createtime'),
+			'photo_name' 	=> Yii::t('feedback','photoname'),
+			'dealed' 	=> Yii::t('feedback','dealed'),
+			'dealed_zn' => Yii::t('feedback','dealedzn'),
 		);
 	}
 
@@ -109,6 +109,6 @@ class Feedback extends CActiveRecord
 
 	public function setDealedZn()
 	{
-		$this->dealed_zn=$this->dealed==="2"?"未处理":"已处理";
+		$this->dealed_zn=$this->dealed==="2"?Yii::t('feedback','undealed'):Yii::t('feedback','iddealed');
 	}
 }

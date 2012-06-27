@@ -58,6 +58,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'amazing_level',
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{delete}',
 			'deleteButtonUrl'=>'Yii::app()->createUrl("/product/deleteComment", array("id" => $data->id))',
 		),
 	),

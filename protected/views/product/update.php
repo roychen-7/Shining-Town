@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'Products'=>array('index'),
+	Yii::t('product','product')=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	Yii::t('product','productupdate'),
 );
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
-	array('label'=>'Create Product', 'url'=>array('create')),
-	array('label'=>'View Product', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Product', 'url'=>array('admin')),
+	array('label'=>Yii::t('product','productlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('product','productcreate'), 'url'=>array('create')),
+	array('label'=>Yii::t('product','productdetail'), 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>Yii::t('product','productmanager'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Product <?php echo $model->id; ?></h1>
+<h2><?=Yii::t('product','productupdate'),' ',$model->product_name;?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -80,14 +80,14 @@ class Product extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'product_id' => 'Product',
-			'product_name' => 'Product Name',
-			'product_introduce' => 'Product Introduce',
-			'product_mark' => 'Product Mark',
-			'product_create_time' => 'Product Create Time',
-			'product_marked_times' => 'Product Marked Times',
-			'mask_photo_id' => 'Mask Photo',
+			'id' => Yii::t('product','id'),
+			'product_id' 	=> Yii::t('product','productid'),
+			'product_name' 	=> Yii::t('product','productname'),
+			'product_introduce'	=> Yii::t('product','productintroduce'),
+			'product_mark' 	=> Yii::t('product','productmark'),
+			'product_create_time'	=> Yii::t('product','productcreatetime'),
+			'product_marked_times'	=> Yii::t('product','productmarkedtimes'),
+			'mask_photo_id' => Yii::t('product','maskphotoid'),
 		);
 	}
 

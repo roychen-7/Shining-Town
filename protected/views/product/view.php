@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Products'=>array('index'),
+	Yii::t('product','product')=>array('index'),
 	$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
-	array('label'=>'Create Product', 'url'=>array('create')),
-	array('label'=>'Update Product', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Product', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Product', 'url'=>array('admin')),
+	array('label'=>Yii::t('product','productlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('product','productcreate'), 'url'=>array('create')),
+	array('label'=>Yii::t('product','productupdate'), 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>Yii::t('product','productdelete'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('product','productmanager'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Product #<?php echo $model->id; ?></h1>
+<h2><?=$model->product_name; ?></h2>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -34,15 +34,15 @@ echo '<div class="view">';
 foreach($photos as $photo)
 {
 	echo '<div class="view">';
-	echo ($photo->id === $model->mask_photo_id)?'封面（不能删除）<br />':'';
-	echo CHtml::image(Yii::app()->baseUrl.'/images/photos/'.$model->product_id.'/'.$photo->photo_name,'示例图片',array('width'=>'200px','height'=>'150px')).'<br />'; 
-	echo ($photo->id !== $model->mask_photo_id)?CHtml::ajaxButton('删除', '#', array(),array('submit'=>array('deletePhoto','id'=>$photo->id,'modelId'=>$model->id))):'';
-	echo ($photo->id !== $model->mask_photo_id)?CHtml::ajaxButton('设为封面', '#', array(),array('submit'=>array('setThumbnail','id'=>$photo->id,'modelId'=>$model->id))):'';
+	echo ($photo->id === $model->mask_photo_id)? Yii::t('product','front(can not be deleted)').'<br />':'';
+	echo CHtml::image(Yii::app()->baseUrl.'/images/photos/'.$model->product_id.'/'.$photo->photo_name,'',array('width'=>'200px','height'=>'150px')).'<br />'; 
+	echo ($photo->id !== $model->mask_photo_id)?CHtml::ajaxButton(Yii::t('product','delete'), '#', array(),array('submit'=>array('deletePhoto','id'=>$photo->id,'modelId'=>$model->id))):'';
+	echo ($photo->id !== $model->mask_photo_id)?CHtml::ajaxButton(Yii::t('product','setthefront'), '#', array(),array('submit'=>array('setThumbnail','id'=>$photo->id,'modelId'=>$model->id))):'';
 	echo '</div>';
 }
 echo '</div>';
 echo '<br />';
-echo '<h2>评论：</h2>';
+echo '<h2>',Yii::t('product','comments'),'</h2>';
 
 
 $this->widget('zii.widgets.grid.CGridView', array(

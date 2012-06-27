@@ -26,7 +26,12 @@
 		<?php echo $form->error($model,'product_introduce'); ?>
 	</div>
 	
-	<p>默认<span class="required">第一张</span>作为封面，若要修改请在完成后点击设置封面</p>
+	<?php
+		if($model->isNewRecord)
+		{
+			echo "<p>",Yii::t('product','default'),"<span class='required'>",Yii::t('product','the first one'),"</span>",Yii::t('product','is the cover'),"</p>";
+		}
+	?>
 	
 	<?php
 		$this->widget('CMultiFileUpload', array(
@@ -44,7 +49,7 @@
 	?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '修改'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('product','create') : Yii::t('product','update')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

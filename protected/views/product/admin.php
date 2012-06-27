@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Products'=>array('index'),
-	'Manage',
+	Yii::t('product','product')=>array('index'),
+	Yii::t('product','productmanager'),
 );
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
-	array('label'=>'Create Product', 'url'=>array('create')),
+	array('label'=>Yii::t('product','productlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('product','productcreate'), 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,14 +23,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Products</h1>
+<h2><?=Yii::t('product','productmanager')?></h2>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link(Yii::t('product','advanced search'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

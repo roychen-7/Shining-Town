@@ -75,7 +75,7 @@ class ProductController extends Controller
 			
 			if(!$productModel->validateProductId())
 			{
-				throw new CHttpException(400,'product_id不规范，请确认后重新输入！');
+				throw new CHttpException(400,Yii::t('product','product_id invalid, please try again'));
 			}
 			
 			if(!is_dir(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/')) 
@@ -105,7 +105,7 @@ class ProductController extends Controller
 						
 						if(!$photoModel->save())
 						{
-							throw new CHttpException(400,'图片上传遇到问题，请重新上传或与开发者联系');
+							throw new CHttpException(400,Yii::t('product','upload has error, please try again'));
 						}
                   	}
                     else  // handle the errors here, if you want
@@ -233,7 +233,7 @@ class ProductController extends Controller
 			
 			if(!$productModel->validateProductId())
 			{
-				throw new CHttpException(400,'product_id不规范，请确认后重新输入！');
+				throw new CHttpException(400,Yii::t('product','product_id invalid, please try again'));
 			}
 			
 			$images = CUploadedFile::getInstancesByName('images');
@@ -252,7 +252,7 @@ class ProductController extends Controller
 						
 						if(!$photoModel->save())
 						{
-							throw new CHttpException(400,'图片上传遇到问题，请重新上传或与开发者联系');
+							throw new CHttpException(400,Yii::t('product','upload has error, please try again'));
 						}
                   				}
                   				else  // handle the errors here, if you want
@@ -340,7 +340,7 @@ class ProductController extends Controller
 			}
 			else
 			{
-				throw new CHttpException(400,'Invalid request. This photo is a thumbnail. You can not delete it now.');
+				throw new CHttpException(400,Yii::t('product','Invalid request. This photo is a thumbnail. You can not delete it now.'));
 			}
 
 			$this->redirect(array('view','id'=>$modelId));

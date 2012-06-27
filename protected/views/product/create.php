@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Products'=>array('index'),
-	'Create',
+	Yii::t('product','product')=>array('index'),
+	Yii::t('product','productcreate'),
 );
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
-	array('label'=>'Manage Product', 'url'=>array('admin')),
+	array('label'=>Yii::t('product','productlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('product','productmanager'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Product</h1>
+<h2><?=Yii::t('product','productcreate')?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -165,15 +165,15 @@ class CommentController extends Controller
 			$commentModel->delivery_speed = $commentCreatePost['delivery_speed'];
 			if(!Comment::model()->validateContactMethod($commentCreatePost['contact_method']))
 			{
-				$errorMessage = '联系方式太长';
+				$errorMessage = Yii::t('comment','Contact method is too long!');
 			}
 			if(!Comment::model()->validateSiteMark($commentCreatePost['service_attitude']))
 			{
-				$errorMessage = '服务态度打分不在范围内';
+				$errorMessage = Yii::t('comment','Service mark is out of range!');
 			}
 			if(!Comment::model()->validateSiteMark($commentCreatePost['delivery_speed']))
 			{
-				$errorMessage = '发货速度打分不在范围内';
+				$errorMessage = Yii::t('comment','Delivery mark is out of range!');
 			}
 			
 			$this->layout = false;
@@ -197,7 +197,7 @@ class CommentController extends Controller
 				}
 				else
 				{
-					$errorMessage = '服务器错误！';
+					$errorMessage = Yii::t('comment','Server error!');
 					
 					$this->render('_customerCreate',array(
 							'response'=>'failure',

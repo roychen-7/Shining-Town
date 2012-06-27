@@ -67,12 +67,12 @@ class Comment extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => '序号',
-			'text' => '正文',
-			'create_time' => '创建时间',
-			'contact_method' => '联系方式',
-			'service_attitude' => '服务态度',
-			'delivery_speed' => '发货速度',
+			'id' 		=> Yii::t('comment','id'),
+			'text' 		=> Yii::t('comment','text'),
+			'create_time' 	=> Yii::t('comment','createtime'),
+			'contact_method' 	=> Yii::t('comment','contactmethod'),
+			'service_attitude' 	=> Yii::t('comment','serviceattitude'),
+			'delivery_speed' 	=> Yii::t('comment','deliveryspeed'),
 		);
 	}
 

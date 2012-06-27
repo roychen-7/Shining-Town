@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'评论'=>array('index'),
+	Yii::t('comment','comment')=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'更新',
+	Yii::t('comment','update'),
 );
 
 $this->menu=array(
-	array('label'=>'评论列表', 'url'=>array('index')),
-	array('label'=>'创建评论', 'url'=>array('create')),
-	array('label'=>'评论内容', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'管理评论', 'url'=>array('admin')),
+	array('label'=>Yii::t('comment','commentlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('comment','commentcreate'), 'url'=>array('create')),
+	array('label'=>Yii::t('comment','commentdetail'), 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>Yii::t('comment','commentmanager'), 'url'=>array('admin')),
 );
 ?>
 
-<h2>更新评论 （序号：<?php echo $model->id; ?>）</h2>
+<h2><?php echo Yii::t('comment','commentupdate'),'(',Yii::t('comment','id'),' ',$model->id; ?>)</h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

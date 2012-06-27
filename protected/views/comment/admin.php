@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'评论'=>array('index'),
-	'管理',
+	Yii::t('comment','comment')=>array('index'),
+	Yii::t('comment','commentmanager'),
 );
 
 $this->menu=array(
-	array('label'=>'评论列表', 'url'=>array('index')),
-	array('label'=>'创建评论', 'url'=>array('create')),
+	array('label'=>Yii::t('comment','commentlist'), 'url'=>array('index')),
+	array('label'=>Yii::t('comment','commentcreate'), 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,9 +23,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h2>管理评论</h2>
+<h2><?=Yii::t('comment','commentmanager');?></h2>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link(Yii::t('comment','advancedsearch'),'#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

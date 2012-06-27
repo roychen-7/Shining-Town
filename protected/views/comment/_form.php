@@ -32,7 +32,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? '创建' : '保存'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('comment','create') : Yii::t('comment','save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

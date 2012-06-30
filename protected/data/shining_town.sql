@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 06 月 30 日 11:11
+-- 生成日期: 2012 年 06 月 30 日 13:07
 -- 服务器版本: 5.5.16
 -- PHP 版本: 5.3.8
 
@@ -163,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `st_photo` (
   `photo_state_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_photo_state` (`photo_state_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- 转存表中的数据 `st_photo`
@@ -179,7 +179,9 @@ INSERT INTO `st_photo` (`id`, `photo_name`, `product_id`, `photo_state_id`) VALU
 (9, '61186e38129a0e7896ddd825.jpg', '000009', 1),
 (11, 'Chrysanthemum.jpg', '000010', 1),
 (12, 'Desert.jpg', '000010', 1),
-(13, 'Chrysanthemum.jpg', '000009', 1);
+(13, 'Chrysanthemum.jpg', '000009', 1),
+(14, 'Chrysanthemum.jpg', '000001', 1),
+(15, 'Hydrangeas.jpg', '000001', 1);
 
 -- --------------------------------------------------------
 
@@ -219,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `st_product` (
   PRIMARY KEY (`id`),
   KEY `product_id` (`product_id`),
   KEY `fk_product_photo` (`mask_photo_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- 转存表中的数据 `st_product`
@@ -229,7 +231,8 @@ INSERT INTO `st_product` (`id`, `product_id`, `product_name`, `product_introduce
 (11, '000004', 'another test', 'another test', 5, '2012-04-13 18:13:56', 0, 5),
 (12, '000008', 'test4', 'test4', 5, '2012-04-17 19:46:55', 0, 8),
 (13, '000009', 'test5', 'test4sdasdf', 5, '2012-04-17 19:48:38', 0, 13),
-(14, '000010', '测试', '测试产品', 5, '2012-05-02 16:36:06', 0, 11);
+(14, '000010', '测试', '测试产品', 5, '2012-05-02 16:36:06', 0, 11),
+(15, '000001', 'xiashuai', 'haha', 5, '2012-06-30 11:27:57', 0, 14);
 
 -- --------------------------------------------------------
 
@@ -246,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `st_product_comment` (
   `amazing_level` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_comment_product` (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

@@ -156,6 +156,6 @@ class Product extends CActiveRecord
 	{
 		$sql_getProductName = "SELECT product_name FROM `st_product` WHERE product_id = '$product_id'";
 		$result = Yii::app()->db->createCommand($sql_getProductName)->queryAll();
-		return isset($results[0])?$results[0]:null;
+		return isset($result[0])?$result[0]['product_name']:null;
 	}
 }

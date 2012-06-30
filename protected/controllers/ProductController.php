@@ -408,10 +408,14 @@ class ProductController extends Controller
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
-			// we only allow deletion via POST request
-		//ProductComment::model()->findByPk($id)->delete();
-
 			$productCommentModel = ProductComment::model()->findByPk($id);
+			$productModel = Product::model()->findByAttributes(array('product_id'=>$productCommentModel->product_id));
+			$productModel->product_mark_sum = $productModel->product_mark * $productModel->product_marked_times - $productCommentModel->amazing_level;
+			--$productModel->product_marked_times;
+			$productModel->product_mark = ($productModel->product_marked_times === 0)? 5 : $productModel->product_mark_sum/$productModel->product_marked_times;
+
+			$productModel->save();
+			$productCommentModel->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))

@@ -18,6 +18,7 @@ return array(
 	'dealedzn' 		=> '是否处理',
 	'undealed'		=> '未处理',
 	'isdealed'		=> '已处理',
+	'deal again'	=> '再处理',
 	//Log
 	'Error orderid, please try again!'	=> '订单号有错误，请重新检查后输入！',
 	'Feedback has already submited please wait!'	=> '已经提交过问题，请等候处理，或直接与客服人员联系',

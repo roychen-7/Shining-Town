@@ -73,7 +73,7 @@ class CommentController extends Controller
 			++$siteMarkModel->service_attitude_times;
 			++$siteMarkModel->delivery_speed_times;
 			$siteMarkModel->service_attitude = $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
-			$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->service_attitude_times;
+			$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->delivery_speed_times;
 			if($commentModel->save() && $siteMarkModel->save())
 				$this->redirect(array('view','id'=>$commentModel->id));
 		}
@@ -124,8 +124,8 @@ class CommentController extends Controller
 			$siteMarkModel->delivery_speed_sum = $siteMarkModel->delivery_speed*$siteMarkModel->delivery_speed_times - $commentModel->delivery_speed;
 			--$siteMarkModel->service_attitude_times;
 			--$siteMarkModel->delivery_speed_times;
-			$siteMarkModel->service_attitude = $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
-			$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->service_attitude_times;
+			$siteMarkModel->service_attitude = ($siteMarkModel->service_attitude_times === 0)? 5 : $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
+			$siteMarkModel->delivery_speed = ($siteMarkModel->service_attitude_times === 0)? 5 : $siteMarkModel->delivery_speed_sum/$siteMarkModel->delivery_speed_times;
 
 			$commentModel->delete();
 			$siteMarkModel->save();
@@ -203,7 +203,7 @@ class CommentController extends Controller
 				++$siteMarkModel->service_attitude_times;
 				++$siteMarkModel->delivery_speed_times;
 				$siteMarkModel->service_attitude = $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
-				$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->service_attitude_times;
+				$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->delivery_speed_times;
 				
 				if($siteMarkModel->save()&&$commentModel->save())
 				{

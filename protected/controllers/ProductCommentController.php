@@ -105,9 +105,9 @@ class ProductCommentController extends Controller
 			if($errorMessage === null)
 			{
 				$productModel = Product::model()->findByPk($productCommentModel->product_id);
-				$productModel->product_mark_sum = $productModel->product_mark * $productModel->product_mark_times + $productCommentModel->amazing_level;
-				++$productModel->product_mark_times;
-				$productModel->product_mark = $productModel->product_mark_sum/$productModel->product_mark_times;
+				$productModel->product_mark_sum = $productModel->product_mark * $productModel->product_marked_times + $productCommentModel->amazing_level;
+				++$productModel->product_marked_times;
+				$productModel->product_mark = $productModel->product_mark_sum/$productModel->product_marked_times;
 				
 				if($productCommentModel->save()&&$productModel->save())
 				{
@@ -195,7 +195,14 @@ class ProductCommentController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$productCommentModel = $this->loadModel($id);
+			$productModel = Product::model()->findByPk($productCommentModel->product_id);
+			$productModel->product_mark_sum = $productModel->product_mark * $productModel->product_marked_times - $productCommentModel->amazing_level;
+			--$productModel->product_marked_times;
+			$productModel->product_mark = $productModel->product_mark_sum/$productModel->product_marked_times;
+
+			$productModel->save();
+			$productCommentModel->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))

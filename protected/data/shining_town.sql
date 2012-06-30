@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2012 年 05 月 25 日 04:09
+-- 生成日期: 2012 年 06 月 30 日 11:11
 -- 服务器版本: 5.5.16
 -- PHP 版本: 5.3.8
 
@@ -34,16 +34,16 @@ CREATE TABLE IF NOT EXISTS `st_comment` (
   `service_attitude` int(11) NOT NULL,
   `delivery_speed` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- 转存表中的数据 `st_comment`
 --
 
 INSERT INTO `st_comment` (`id`, `text`, `create_time`, `contact_method`, `service_attitude`, `delivery_speed`) VALUES
-(1, 'comment test 1', '2012-03-14 00:00:00', NULL, 5, 5),
-(2, 'comment test 2', '2012-03-27 00:00:00', NULL, 5, 5),
-(3, 'Hello', '2012-04-15 13:30:56', 'hello@gmail.com', 5, 5);
+(3, 'Hello', '2012-04-15 13:30:56', 'hello@gmail.com', 5, 5),
+(4, '56456', '2012-06-30 10:10:45', '', 2, 2),
+(5, 'ertrt', '2012-06-30 10:19:26', '', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `st_order` (
   KEY `fk_order_orderState` (`order_state_id`),
   KEY `fk_order_product` (`product_id`),
   KEY `fk_order_user` (`entered_pid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- 转存表中的数据 `st_order`
@@ -118,7 +118,9 @@ CREATE TABLE IF NOT EXISTS `st_order` (
 INSERT INTO `st_order` (`id`, `order_id`, `order_state_id`, `create_time`, `product_id`, `entered_pid`, `remark`) VALUES
 (3, '000001', 2, '2012-03-25', '000001', '000001', '1天'),
 (4, '000002', 1, '2012-03-24', '000001', '000001', '2012-03-26进行制作'),
-(5, '000003', 1, '2012-03-24', '000001', '000001', '2012-03-26进行制作');
+(5, '000003', 1, '2012-03-24', '000001', '000001', '2012-03-26进行制作'),
+(6, '000010', 1, '2012-06-30', '000001', '000001', '2012-07-02进行制作'),
+(8, '000011', 1, '2012-06-30', '000004', '000001', '2012-07-02进行制作');
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `st_photo` (
   `photo_state_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_photo_state` (`photo_state_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `st_photo`
@@ -175,9 +177,9 @@ INSERT INTO `st_photo` (`id`, `photo_name`, `product_id`, `photo_state_id`) VALU
 (7, 'iphone_4_colors.jpg', '000008', 1),
 (8, '13085.jpg', '000008', 1),
 (9, '61186e38129a0e7896ddd825.jpg', '000009', 1),
-(10, '13085.jpg', '000009', 1),
 (11, 'Chrysanthemum.jpg', '000010', 1),
-(12, 'Desert.jpg', '000010', 1);
+(12, 'Desert.jpg', '000010', 1),
+(13, 'Chrysanthemum.jpg', '000009', 1);
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `st_product` (
 INSERT INTO `st_product` (`id`, `product_id`, `product_name`, `product_introduce`, `product_mark`, `product_create_time`, `product_marked_times`, `mask_photo_id`) VALUES
 (11, '000004', 'another test', 'another test', 5, '2012-04-13 18:13:56', 0, 5),
 (12, '000008', 'test4', 'test4', 5, '2012-04-17 19:46:55', 0, 8),
-(13, '000009', 'test5', 'test4sdasdf', 5, '2012-04-17 19:48:38', 0, 9),
+(13, '000009', 'test5', 'test4sdasdf', 5, '2012-04-17 19:48:38', 0, 13),
 (14, '000010', '测试', '测试产品', 5, '2012-05-02 16:36:06', 0, 11);
 
 -- --------------------------------------------------------
@@ -245,14 +247,6 @@ CREATE TABLE IF NOT EXISTS `st_product_comment` (
   PRIMARY KEY (`id`),
   KEY `fk_comment_product` (`product_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- 转存表中的数据 `st_product_comment`
---
-
-INSERT INTO `st_product_comment` (`id`, `product_id`, `text`, `create_time`, `contact_method`, `amazing_level`) VALUES
-(1, '000004', 'product comment test', '2012-04-13 00:00:00', 'roychad0421@gmail.com', 5),
-(2, '000004', 'test', '2012-04-16 00:00:00', 'roychad0421@gmail.com', 5);
 
 -- --------------------------------------------------------
 
@@ -274,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `st_site_mark` (
 --
 
 INSERT INTO `st_site_mark` (`id`, `service_attitude`, `delivery_speed`, `service_attitude_times`, `delivery_speed_times`) VALUES
-(1, 5, 5, 2, 2);
+(1, 4, 4, 3, 3);
 
 -- --------------------------------------------------------
 

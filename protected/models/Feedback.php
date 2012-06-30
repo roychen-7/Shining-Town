@@ -109,6 +109,6 @@ class Feedback extends CActiveRecord
 
 	public function setDealedZn()
 	{
-		$this->dealed_zn=$this->dealed==="2"?Yii::t('feedback','undealed'):Yii::t('feedback','iddealed');
+		$this->dealed_zn=$this->dealed==="2"?Yii::t('feedback','undealed'):Yii::t('feedback','isdealed');
 	}
 }

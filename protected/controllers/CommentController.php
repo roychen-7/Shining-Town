@@ -57,21 +57,29 @@ class CommentController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Comment;
+		$commentModel=new Comment;
+		$siteMarkModel = SiteMark::model()->findByAttributes(array('id'=>'1'));
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		$this->performAjaxValidation($commentModel);
 
 		if(isset($_POST['Comment']))
 		{
-			$model->attributes=$_POST['Comment'];
-			$model->create_time = date("Y-m-d H:i:s");
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+
+			$commentModel->attributes=$_POST['Comment'];
+			$commentModel->create_time = date("Y-m-d H:i:s");
+			$siteMarkModel->service_attitude_sum = $siteMarkModel->service_attitude*$siteMarkModel->service_attitude_times + $commentModel->service_attitude;
+			$siteMarkModel->delivery_speed_sum = $siteMarkModel->delivery_speed*$siteMarkModel->delivery_speed_times + $commentModel->delivery_speed;
+			++$siteMarkModel->service_attitude_times;
+			++$siteMarkModel->delivery_speed_times;
+			$siteMarkModel->service_attitude = $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
+			$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->service_attitude_times;
+			if($commentModel->save() && $siteMarkModel->save())
+				$this->redirect(array('view','id'=>$commentModel->id));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$commentModel,
 		));
 	}
 
@@ -110,7 +118,17 @@ class CommentController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$commentModel = $this->loadModel($id);//->delete();
+			$siteMarkModel = SiteMark::model()->findByPk('1');
+			$siteMarkModel->service_attitude_sum = $siteMarkModel->service_attitude*$siteMarkModel->service_attitude_times - $commentModel->service_attitude;
+			$siteMarkModel->delivery_speed_sum = $siteMarkModel->delivery_speed*$siteMarkModel->delivery_speed_times - $commentModel->delivery_speed;
+			--$siteMarkModel->service_attitude_times;
+			--$siteMarkModel->delivery_speed_times;
+			$siteMarkModel->service_attitude = $siteMarkModel->service_attitude_sum/$siteMarkModel->service_attitude_times;
+			$siteMarkModel->delivery_speed = $siteMarkModel->delivery_speed_sum/$siteMarkModel->service_attitude_times;
+
+			$commentModel->delete();
+			$siteMarkModel->save();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
@@ -124,7 +142,6 @@ class CommentController extends Controller
 	public function actionCommentList($last_id)
 	{
 		$this->layout = false;
-		$errorMessage = null;
 		$errorMessage = Comment::model()->validateId($last_id)?null:'Error last_id';
 		
 		if($errorMessage === null)
@@ -158,11 +175,11 @@ class CommentController extends Controller
 			$commentModel = new Comment;
 			$errorMessage = null;
 			$commentCreatePost = json_decode($_POST['commentJSON'],true);
-			$commentModel->text = $commentCreatePost['text'];
+			$commentModel->text = isset($commentCreatePost['text'])?$commentCreatePost['text'] : Yii::t('comment','no comment text');
 			$commentModel->create_time = date("Y-m-d H:i:s");
-			$commentModel->contact_method = $commentCreatePost['contact_method'];
-			$commentModel->service_attitude = $commentCreatePost['service_attitude'];
-			$commentModel->delivery_speed = $commentCreatePost['delivery_speed'];
+			$commentModel->contact_method = isset($commentCreatePost['contact_method'])?$commentCreatePost['contact_method'] : null;
+			$commentModel->service_attitude = isset($commentCreatePost['service_attitude'])?$commentCreatePost['service_attitude'] : 5;
+			$commentModel->delivery_speed = isset($commentCreatePost['delivery_speed'])?$commentCreatePost['delivery_speed'] : 5;
 			if(!Comment::model()->validateContactMethod($commentCreatePost['contact_method']))
 			{
 				$errorMessage = Yii::t('comment','Contact method is too long!');
@@ -253,17 +270,6 @@ class CommentController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
-	}
-	
-	public function getSiteMarks()
-	{
-		$_model = SiteMark::model()->findByPk('1');
-		return array(
-			'site_service_attitude' => $_model->service_attitude,
-			'site_delivery_speed' => $_model->delivery_speed,
-			'site_service_attitude_times' => $_model->service_attitude_times,
-			'site_delivery_speed_times' => $_model->delivery_speed_times,
-		);
 	}
 
 	/**

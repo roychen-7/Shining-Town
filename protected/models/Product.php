@@ -151,4 +151,11 @@ class Product extends CActiveRecord
 			return false;
 		}
 	}
+
+	static public function getProductNameByProductId($product_id)
+	{
+		$sql_getProductName = "SELECT product_name FROM `st_product` WHERE product_id = '$product_id'";
+		$result = Yii::app()->db->createCommand($sql_getProductName)->queryAll();
+		return isset($results[0])?$results[0]:null;
+	}
 }

@@ -40,6 +40,7 @@ return array(
 	'Order is not exist!'						=> '订单不存在！',
 	'Order id format is wrong, please try again!'	=> '订单号格式有错误，请检测后重新输入！',
 	'Order is not exist, please try again!' 	=> '输入的订单号从未入库，请核实订单号后重新输入！',
+	'Product is not exist!'						=> '产品不存在，请核对产品编号！',
 );
 
 ?>

@@ -186,8 +186,8 @@ class ProductController extends Controller
 		$this->layout = false;
 		$errorMessage = null;
 		$errorMessage = Product::model()->validateExistProductId($product_id)?null:'Error product_id';
-		$errorMessage = Product::model()->validateId($last_id)?null:'Error last_id';
-		
+		$errorMessage = Product::model()->validateId($last_id)?$errorMessage:'Error last_id';
+
 		if($errorMessage === null)
 		{
 			$productModel = Product::model()->findByAttributes(array('product_id'=>$product_id));
@@ -409,7 +409,9 @@ class ProductController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			ProductComment::model()->findByPk($id)->delete();
+		//ProductComment::model()->findByPk($id)->delete();
+
+			$productCommentModel = ProductComment::model()->findByPk($id);
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))

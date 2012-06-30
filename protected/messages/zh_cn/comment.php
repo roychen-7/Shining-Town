@@ -23,6 +23,7 @@ return array(
 	'Service mark is out of range!'	=> '服务态度打分不在范围内',
 	'Delivery mark is out of range!'=> '发货速度打分不在范围内',
 	'Server error!'	=> '服务器错误！',
+	'no comment text' 	=> '没有评论',
 );
 
 ?>

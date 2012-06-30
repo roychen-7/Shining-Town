@@ -27,7 +27,7 @@ class OrderController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'search' action
-				'actions'=>array('search'),
+				'actions'=>array('customer'),
 				'users'=>array('*'),
 			),
 			array('allow',  // allow workers to perform 'create' and 'update' actions
@@ -77,6 +77,10 @@ class OrderController extends Controller
 			{
 				throw new CHttpException(405,Yii::t('order','Url has been changed, please try again!'));
 			}
+			if(!Product::model()->validateExistProductId($_POST['Order']['product_id']))
+			{
+				throw new CHttpException(405,Yii::t('order','Product is not exist!'));
+			}
 			$model->attributes=$_POST['Order'];
 			$model->order_state_id = 1;
 			$model->create_time = date("Y-m-d");
@@ -103,8 +107,7 @@ class OrderController extends Controller
 		{
 			$model = $this->loadExistOrder($_GET['order_id']);
 			$model->order_info = OrderState::model()->getStateZnByStateId($model->order_state_id).$model->remark;
-			//Open when the product model is finished
-			//$model->product_name = Product::model()->getProductNameByProductId($model->product_id);
+			$model->product_name = Product::model()->getProductNameByProductId($model->product_id);
 		}
 		else
 		{

@@ -48,22 +48,37 @@ class FeedbackController extends Controller
 	public function actionCustomer()
 	{
 		$this->layout = false;
+
 		if(isset($_POST['feedback']))
 		{
 			$model = new Feedback;
 			$errorMessage = null;
 			$createFeedback = json_decode($_POST['feedback'],true);
 
-			$sql_existFeedback = "SELECT * FROM `st_feedback` WHERE order_id = '".$createFeedback['order_id']."'";
-			
 
-			if(!Order::model()->existOrderByOrderId($createFeedback['order_id']))
+			if(!isset($createFeedback['order_id']) || !Order::model()->existOrderByOrderId($createFeedback['order_id']))
 			{
 				$errorMessage = Yii::t('feedback','Error orderid, please try again!');
+				$this->render('customer',array(
+					'errorMessage'=>$errorMessage,
+				));
+				return 0;
 			}
 			elseif(is_dir("images/feedback/".$createFeedback['order_id']))
 			{
 				$errorMessage = Yii::t('feedback','Feedback has already submited please wait!');
+				$this->render('customer',array(
+					'errorMessage'=>$errorMessage,
+				));
+				return 0;
+			}
+			elseif(!isset($createFeedback['content_text']) || ($createFeedback['content_text'] === null))
+			{
+				$errorMessage = Yii::t('feedback','Text can not be blank!');
+				$this->render('customer',array(
+					'errorMessage'=>$errorMessage,
+				));
+				return 0;
 			}
 			else
 			{
@@ -73,25 +88,24 @@ class FeedbackController extends Controller
 				$model->create_time = date("Y-m-d H:i:s");
 				$model->dealed = 2;
 
-				if(!$model->save())
-				{
-					$errorMessage = Yii::t('feedback','Feedback message has error, please try again!');
-				}
+				$images = CUploadedFile::getInstancesByName('image');
 
-				if(isset($_POST['image']))
+				if(isset($images))
 				{
-					$images = CUploadedFile::getInstancesByName('image');
-				
+					mkdir(Yii::getPathOfAlias('webroot').'/images/feedback/'.$model->order_id.'/');
+					chmod(Yii::getPathOfAlias('webroot').'/images/feedback/'.$model->order_id.'/', 0755);
+					
 					if (isset($images) && count($images) > 0) 
 					{
 						foreach($images as $image => $pic)
 						{
-							$pic->saveAs(Yii::getPathOfAlias('webroot').'/images/feedback/'.$order_id.$pic->name);
+							$pic->saveAs(Yii::getPathOfAlias('webroot').'/images/feedback/'.$model->order_id.'/'.$pic->name);
 						}
 					}
 
 					$model->photo_name = "feedback.png";
 				}
+
 				if(!$model->save())
 				{
 					$errorMessage = Yii::t('feedback','Feedback message has error, please try again!');

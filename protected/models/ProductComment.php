@@ -17,7 +17,7 @@
 class ProductComment extends CActiveRecord
 {
 	public $product_name;
-	
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return ProductComment the static model class
@@ -43,7 +43,7 @@ class ProductComment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_id, text, create_time, contact_method, amazing_level', 'required'),
+			array('product_id, text, create_time, amazing_level', 'required'),
 			array('amazing_level', 'numerical', 'integerOnly'=>true),
 			array('product_id', 'length', 'max'=>50),
 			array('contact_method', 'length', 'max'=>100),
@@ -103,7 +103,7 @@ class ProductComment extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
+
 	//Confirm the product_id
 	static public function validateProductId($product_id)
 	{

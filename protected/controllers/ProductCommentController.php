@@ -77,17 +77,18 @@ class ProductCommentController extends Controller
 	//Get customer's comment about an exist product 
 	public function actionCommentCreate()
 	{
-		if(isset($_POST['productCommentJSON'])&&isJSON($_POST['productCommentJSON']))
+		if(isset($_POST['commentJSON'])&&isJSON($_POST['commentJSON']))
 		{
 			$productCommentModel = new ProductComment;
 			$errorMessage = null;
-			$commentCreatePost = json_decode($_POST['productCommentJSON']);
-			$productCommentModel->text = $commentCreatePost['text'];
+			$commentCreatePost = json_decode($_POST['commentJSON'], true);
+			$productCommentModel->text = isset($commentCreatePost['text'])? $commentCreatePost['text'] : '';
 			$productCommentModel->create_time = date("Y-m-d H:i:s");
-			$productCommentModel->product_id = $commentCreatePost['product_id'];
-			$productCommentModel->contact_method = $commentCreatePost['contact_method'];
-			$productCommentModel->amazing_level = $commentCreatePost['amazing_level'];
-			if(!$productCommentModel->validateProductId())
+			$productCommentModel->product_id = isset($commentCreatePost['product_id'])? $commentCreatePost['product_id'] : '';
+			$productCommentModel->contact_method = isset($commentCreatePost['contact_method'])? $commentCreatePost['contact_method'] : '';
+			$productCommentModel->amazing_level = isset($commentCreatePost['amazing_level'])? $commentCreatePost['amazing_level'] : 5;
+
+			if(!$productCommentModel->validateProductId($productCommentModel->product_id))
 			{
 				$errorMessage = '该产品不存在，请确认后重新提交';
 			}
@@ -104,11 +105,11 @@ class ProductCommentController extends Controller
 			
 			if($errorMessage === null)
 			{
-				$productModel = Product::model()->findByPk($productCommentModel->product_id);
+				$productModel = Product::model()->findByAttributes(array('product_id' => $productCommentModel->product_id));
 				$productModel->product_mark_sum = $productModel->product_mark * $productModel->product_marked_times + $productCommentModel->amazing_level;
 				++$productModel->product_marked_times;
 				$productModel->product_mark = $productModel->product_mark_sum/$productModel->product_marked_times;
-				
+
 				if($productCommentModel->save()&&$productModel->save())
 				{
 					$this->render('_customerCreate',array(

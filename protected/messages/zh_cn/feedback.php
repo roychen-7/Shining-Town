@@ -23,6 +23,7 @@ return array(
 	'Error orderid, please try again!'	=> '订单号有错误，请重新检查后输入！',
 	'Feedback has already submited please wait!'	=> '已经提交过问题，请等候处理，或直接与客服人员联系',
 	'Feedback message has error, please try again!'	=> '提交的信息可能有误，请重新提交或者与客服联系。',
+	'Text can not be blank!'	=> '内容不能为空！',
 );
 
 ?>

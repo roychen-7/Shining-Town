@@ -31,7 +31,7 @@ echo CHtml::image(Yii::app()->baseUrl.'/images/feedback/'.$model->order_id.'/fee
 	</div>
 
 	<div class="row buttons">
-		<?php echo ($model->dealed === 2)?CHtml::submitButton($model->isNewRecord ? 'Create' : Yii::t('feedback','deal')) : CHtml::submitButton($model->isNewRecord ? 'Create' : Yii::t('feedback','deal again')); ?>
+		<?php echo ($model->dealed === 2)?CHtml::submitButton(Yii::t('feedback','deal')) : CHtml::submitButton(Yii::t('feedback','deal again')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

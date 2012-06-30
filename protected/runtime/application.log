@@ -6387,3 +6387,291 @@ Stack trace:
 #1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
 #3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 15:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000008/13085.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000008/13085.jpg
+2012/06/30 15:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 15:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 15:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 15:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 15:12:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000008/13085.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000008/13085.jpg
+2012/06/30 15:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 15:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 18:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 18:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 18:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000008/13085.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000008/13085.jpg
+2012/06/30 18:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 18:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 18:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 18:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 18:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000008/13085.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000008/13085.jpg
+2012/06/30 19:57:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "productComent/commentCreate"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('productComent/c...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/productComent/commentCreate
+2012/06/30 20:22:54 [error] [php] Missing argument 1 for ProductComment::validateProductId(), called in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php on line 90 and defined (D:\xampp\htdocs\ShiningTown\protected\models\ProductComment.php:108)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): ProductCommentController->runAction()
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): ProductCommentController->filterAccessControl()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(257): ProductCommentController->runActionWithFilters()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): ProductCommentController->run()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/productComment/commentCreate
+in D:\xampp\htdocs\ShiningTown\protected\models\ProductComment.php (108)
+in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php (90)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 20:25:42 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php:108)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): ProductCommentController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): ProductCommentController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): ProductCommentController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): ProductCommentController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/productComment/commentCreate
+in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php (108)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 20:29:46 [error] [php] Undefined index: contact_method (D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php:88)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): ProductCommentController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): ProductCommentController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): ProductCommentController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): ProductCommentController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/productComment/commentCreate
+in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductCommentController.php (88)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 20:34:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/61186e38129a0e7896ddd825.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/61186e38129a0e7896ddd825.jpg
+2012/06/30 20:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photos/000004/iphone_4_colors.jpg"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/photos/0...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 20:36:18 [error] [php] Undefined index: contact_method (D:\xampp\htdocs\ShiningTown\protected\controllers\CommentController.php:183)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CommentController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CommentController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): CommentController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CommentController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/comment/commentCreate
+in D:\xampp\htdocs\ShiningTown\protected\controllers\CommentController.php (183)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 20:40:03 [error] [php] Undefined index: contact_method (D:\xampp\htdocs\ShiningTown\protected\controllers\CommentController.php:183)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CommentController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CommentController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): CommentController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): CommentController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/comment/commentCreate
+in D:\xampp\htdocs\ShiningTown\protected\controllers\CommentController.php (183)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 21:43:40 [error] [php] Undefined index: order_id (D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php:58)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): FeedbackController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): FeedbackController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): FeedbackController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): FeedbackController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/feedback/customer
+in D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php (58)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 21:49:21 [error] [php] Undefined variable: message (D:\xampp\htdocs\ShiningTown\protected\views\feedback\customer.php:4)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(866): FeedbackController->renderFile()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(779): FeedbackController->renderPartial()
+#2 D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php(98): FeedbackController->render()
+#3 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): FeedbackController->actionCustomer()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): FeedbackController->runAction()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): FeedbackController->filterAccessControl()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(257): FeedbackController->runActionWithFilters()
+#12 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): FeedbackController->run()
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#14 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/feedback/customer
+in D:\xampp\htdocs\ShiningTown\protected\views\feedback\customer.php (4)
+in D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php (98)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 22:07:04 [error] [php] Undefined index: content_text (D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php:78)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): FeedbackController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): FeedbackController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): FeedbackController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): FeedbackController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/feedback/customer
+in D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php (78)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 22:12:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/feedback/000010/feedback.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('images/feedback...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#3 {main} REQUEST_URI=/ShiningTown/images/feedback/000010/feedback.png
+2012/06/30 22:38:59 [error] [php] Undefined variable: order_id (D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php:102)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): FeedbackController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): FeedbackController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): FeedbackController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): FeedbackController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/feedback/customer
+in D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php (102)
+in D:\xampp\htdocs\ShiningTown\index.php (14)
+2012/06/30 22:44:29 [error] [php] Undefined variable: pic (D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php:100)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): FeedbackController->runAction()
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): FeedbackController->filterAccessControl()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(257): FeedbackController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(277): FeedbackController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\ShiningTown\index.php(14): CWebApplication->run()
+REQUEST_URI=/ShiningTown/feedback/customer
+in D:\xampp\htdocs\ShiningTown\protected\controllers\FeedbackController.php (100)
+in D:\xampp\htdocs\ShiningTown\index.php (14)

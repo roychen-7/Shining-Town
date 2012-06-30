@@ -1,7 +1,7 @@
 <?php
 
 $json = array();
-$json['message'] = $message;
+$json['message'] = $errorMessage;
 
 $json = JSON($json);
 

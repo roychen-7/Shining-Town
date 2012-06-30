@@ -6387,3 +6387,12 @@ Stack trace:
 #1 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #2 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
 #3 {main} REQUEST_URI=/ShiningTown/images/photos/000004/iphone_4_colors.jpg
+2012/06/30 19:23:04 [error] [exception.CException] exception 'CException' with message 'CHttpRequest 不能确认请求的 URI.' in /home/roychad/Webroot/yii/framework/web/CHttpRequest.php:469
+Stack trace:
+#0 /home/roychad/Webroot/yii/framework/web/CHttpRequest.php(381): CHttpRequest->getRequestUri()
+#1 /home/roychad/Webroot/yii/framework/web/CUrlManager.php(361): CHttpRequest->getPathInfo()
+#2 /home/roychad/Webroot/yii/framework/web/CWebApplication.php(134): CUrlManager->parseUrl(Object(CHttpRequest))
+#3 /home/roychad/Webroot/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/roychad/Webroot/ShiningTown/index.php(14): CApplication->run()
+#5 {main}
+---

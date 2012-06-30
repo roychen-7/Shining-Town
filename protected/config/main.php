@@ -73,7 +73,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=shining_town',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		

@@ -45,14 +45,6 @@ return array(
 			// enable cookie-based authentication
 			'class' => 'WebUser',
 		),
-		//hide index.php
-		'urlManager'=>array(
-                'urlFormat'=>'path',
-                'showScriptName'=>false,
-                'rules'=>array(
-                    'sites'=>'site/index',
-                ),
-        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

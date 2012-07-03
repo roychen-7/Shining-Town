@@ -30,7 +30,7 @@
 			'items'=>array(
 				array('label'=>Yii::t('site','login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('site','logout').'('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>Yii::t('order','ordercreate'), 'url'=>array('/order/index')),
+				array('label'=>Yii::t('order','ordercreate'), 'url'=>array('/order/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>Yii::t('order','ordermanager'), 'url'=>array('/order/admin'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>Yii::t('product','productcreate'), 'url'=>array('/product/create'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>Yii::t('comment','commentmanager'), 'url'=>array('/comment/admin'), 'visible'=>Yii::app()->user->isAdmin),

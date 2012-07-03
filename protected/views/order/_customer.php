@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $json = array();
 $json['message'] = $message;

@@ -356,6 +356,10 @@ class ProductController extends Controller
 		$photoModel = $this->loadPhoto($id);
 		$tmpThumbnail = $productModel->mask_photo_id;
 		
+		if(!file_exists(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$photoModel->photo_name))
+		{
+			throw new CHttpException(406,Yii::t('product','Photo is not exist, please contact the admin!'));
+		}
 		$image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').'/images/photos/'.$productModel->product_id.'/'.$photoModel->photo_name);
 		$image->resize(100, 100,Image::NONE);
 		$productModel->mask_photo_id = $photoModel->id;

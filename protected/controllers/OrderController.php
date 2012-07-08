@@ -162,11 +162,21 @@ class OrderController extends Controller
 			case 2:
 				$model->remark = $_POST['Order']['production_time'].Yii::t('order','day');
 				break;
+			case 3:
+				$model->remark = Yii::t('order','Being air-dried');
+				break;
+			case 4:
+				$model->remark = Yii::t('order','Dealing with the details');
+				break;
+			case 5:
+				$model->remark = Yii::t('order','Packing');
+				break;
 			case 6:
 				$model->remark = $_POST['Order']['express_id'];
 				break;
-			default:
-				$model->remark = '';
+			case 7:
+				$model->remark = Yii::t('order','Maintenance method');
+				break;
 			}
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));

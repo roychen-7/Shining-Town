@@ -29,6 +29,7 @@ return array(
 	//Log
 	'product_id invalid, please try again'	=> '产品编号非法，请重新输入！',
 	'upload has error, please try again'	=> '图片上传遇到问题，请重新上传或与开发者联系',
+	'Photo is not exist, please contact the admin!'	=> '选择的图片不存在，请于开发者联系！',
 	'Invalid request. This photo is a thumbnail. You can not delete it now.'	=> '非法请求，这张照片是封面，现在不能删除。',
 );
 

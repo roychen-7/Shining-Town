@@ -23,3 +23,135 @@ Stack trace:
 #20 D:\xampp\htdocs\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #21 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
 #22 {main} REQUEST_URI=/shiningtown/
+2012/07/08 07:57:31 [error] [exception.CException] exception 'CException' with message 'image file not found' in D:\xampp\htdocs\ShiningTown\protected\extensions\image\Image.php:78
+Stack trace:
+#0 D:\xampp\htdocs\ShiningTown\protected\extensions\image\CImageComponent.php(41): Image->__construct('D:/xampp/htdocs...', Array)
+#1 D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php(359): CImageComponent->load('D:/xampp/htdocs...')
+#2 [internal function]: ProductController->actionSetThumbnail('6', '11')
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#14 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#15 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=6&modelId=11
+HTTP_REFERER=http://localhost/ShiningTown/index.php?r=product/view&id=11
+---
+2012/07/08 07:57:40 [error] [exception.CException] exception 'CException' with message 'image file not found' in D:\xampp\htdocs\ShiningTown\protected\extensions\image\Image.php:78
+Stack trace:
+#0 D:\xampp\htdocs\ShiningTown\protected\extensions\image\CImageComponent.php(41): Image->__construct('D:/xampp/htdocs...', Array)
+#1 D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php(359): CImageComponent->load('D:/xampp/htdocs...')
+#2 [internal function]: ProductController->actionSetThumbnail('8', '12')
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#14 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#15 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=8&modelId=12
+HTTP_REFERER=http://localhost/ShiningTown/index.php?r=product/view&id=12
+---
+2012/07/08 08:00:11 [error] [exception.CException] exception 'CException' with message 'image file not found' in D:\xampp\htdocs\ShiningTown\protected\extensions\image\Image.php:78
+Stack trace:
+#0 D:\xampp\htdocs\ShiningTown\protected\extensions\image\CImageComponent.php(41): Image->__construct('D:/xampp/htdocs...', Array)
+#1 D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php(359): CImageComponent->load('D:/xampp/htdocs...')
+#2 [internal function]: ProductController->actionSetThumbnail('6', '11')
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#14 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#15 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=6&modelId=11
+HTTP_REFERER=http://localhost/ShiningTown/index.php?r=product/view&id=11
+---
+2012/07/08 08:03:23 [error] [exception.CException] exception 'CException' with message 'image file not found' in D:\xampp\htdocs\ShiningTown\protected\extensions\image\Image.php:78
+Stack trace:
+#0 D:\xampp\htdocs\ShiningTown\protected\extensions\image\CImageComponent.php(41): Image->__construct('D:/xampp/htdocs...', Array)
+#1 D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php(364): CImageComponent->load('D:/xampp/htdocs...')
+#2 [internal function]: ProductController->actionSetThumbnail('6', '11')
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#14 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#15 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=6&modelId=11
+HTTP_REFERER=http://localhost/ShiningTown/index.php?r=product/view&id=11
+---
+2012/07/08 08:04:42 [error] [exception.CHttpException.406] exception 'CHttpException' with message 'Photo is not exist, please contact the admin!' in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php:361
+Stack trace:
+#0 [internal function]: ProductController->actionSetThumbnail('6', '11')
+#1 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#2 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=6&modelId=11
+---
+2012/07/08 08:05:11 [error] [exception.CHttpException.406] exception 'CHttpException' with message '选择的图片不存在，请于开发者联系！' in D:\xampp\htdocs\ShiningTown\protected\controllers\ProductController.php:361
+Stack trace:
+#0 [internal function]: ProductController->actionSetThumbnail('6', '11')
+#1 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#2 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#3 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(276): CController->run('setThumbnail')
+#12 D:\xampp\htdocs\ShiningTown\protected\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('product/setThum...')
+#13 D:\xampp\htdocs\ShiningTown\protected\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\ShiningTown\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/ShiningTown/index.php?r=product/setThumbnail&id=6&modelId=11
+---

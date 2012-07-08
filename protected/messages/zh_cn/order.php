@@ -41,6 +41,10 @@ return array(
 	'Order id format is wrong, please try again!'	=> '订单号格式有错误，请检测后重新输入！',
 	'Order is not exist, please try again!' 	=> '输入的订单号从未入库，请核实订单号后重新输入！',
 	'Product is not exist!'						=> '产品不存在，请核对产品编号！',
+	'Being air-dried'							=> '正在风干',
+	'Dealing with the details'					=> '细节处理',
+	'Packing'									=> '塑封装箱',
+	'Maintenance method'						=> '保养方法',
 );
 
 ?>

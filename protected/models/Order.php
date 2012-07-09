@@ -23,6 +23,7 @@ class Order extends CActiveRecord
 	public $order_info;
 	public $product_name;
 	public $order_state_zn;
+	public $order_photos;
 	
 	const PRODUCTION_TIME_ONEDAY = 1;
 	const PRODUCTION_TIME_ONEDAYANDAHALF = 2;

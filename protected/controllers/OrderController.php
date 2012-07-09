@@ -108,6 +108,7 @@ class OrderController extends Controller
 			$model = $this->loadExistOrder($_GET['order_id']);
 			$model->order_info = OrderState::model()->getStateZnByStateId($model->order_state_id).$model->remark;
 			$model->product_name = Product::model()->getProductNameByProductId($model->product_id);
+			$model->order_photos = Photo::model()->findAllByAttributes(array('product_id' => $model->product_id));
 		}
 		else
 		{
